@@ -23,7 +23,7 @@ def count_top3(years):
         if fr_all_year is None:
             fr_all_year = fr
         else:
-            fr_all_year = pd.concat([fr, fr2])
+            fr_all_year = pd.concat([fr, fr_all_year])
 
     fr_sum = fr_all_year.groupby(['name', 'sex'], as_index = False).sum()
 
